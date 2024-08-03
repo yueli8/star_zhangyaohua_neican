@@ -1,0 +1,21 @@
+hp@HP-Workstation:~/STAR-2.7.11b/bin/Linux_x86_64$ STAR  --runMode genomeGenerate --genomeDir ./index --genomeFastaFiles ce11.fa --sjdbGTFfile Caenorhabditis_elegans.WBcel235.104.gtf --sjdbOverhang 149 
+Jul 27 20:27:21 ..... started STAR run
+Jul 27 20:27:21 ... starting to generate Genome files
+WARNING: --genomeSAindexNbases 14 is too large for the genome size=101187584, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 12		 Jul 27 20:27:23
+Jul 27 20:27:23 ... starting to sort Suffix Array. This may take a long time...
+Jul 27 20:27:23 ... sorting Suffix Array chunks and saving them to disk...
+Jul 27 20:28:47 ... loading chunks from disk, packing SA...
+Jul 27 20:28:49 ... finished generating suffix array
+Jul 27 20:28:49 ... generating Suffix Array index
+Jul 27 20:29:13 ... completed Suffix Array index
+Jul 27 20:29:13 ..... processing annotations GTF
+Jul 27 20:29:15 ..... inserting junctions into the genome indices
+Jul 27 20:32:22 ... writing Genome to disk ...
+Jul 27 20:32:23 ... writing Suffix Array to disk ...
+Jul 27 20:32:31 ... writing SAindex to disk
+Jul 27 20:32:42 ..... finished successfully
+hp@HP-Workstation:~/STAR-2.7.11b/bin/Linux_x86_64$  STAR  --runMode alignReads --readFilesCommand zcat  --quantMode TranscriptomeSAM GeneCounts --twopassMode Basic --outSAMtype BAM Unsorted --outSAMunmapped None --genomeDir index --readFilesIn A2.rmhost.clean.1.fq.gz A2.rmhost.clean.2.fq.gz --outFileNamePrefix A2
+Jul 27 20:41:21 ..... started STAR run
+Jul 27 20:41:22 ..... loading genome
+Jul 27 20:41:23 ..... started 1st pass mapping
+
